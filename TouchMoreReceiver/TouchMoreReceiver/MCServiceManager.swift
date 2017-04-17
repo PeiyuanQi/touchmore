@@ -1,13 +1,16 @@
 //
 //  MCServiceManager.swift
-//  TouchMore
+//  TouchMoreReceiver
 //
-//  Created by 戚培源 on 16/04/2017.
+//  Created by 戚培源 on 17/04/2017.
 //  Copyright © 2017 戚培源. All rights reserved.
 //
 
+
+import AppKit
 import Foundation
 import MultipeerConnectivity
+import SystemConfiguration
 
 protocol MCServiceManagerDelegate {
     
@@ -21,7 +24,7 @@ class MCServiceManager: NSObject {
     // and can contain only ASCII lowercase letters, numbers and hyphens.
     private let MCServiceType = "touchmore-mc"
     
-    private let myPeerId = MCPeerID(displayName: UIDevice.current.name)
+    private let myPeerId = MCPeerID(displayName: SCDynamicStoreKeyCreateComputerName(nil) as String)
     private let serviceAdvertiser : MCNearbyServiceAdvertiser
     private let serviceBrowser : MCNearbyServiceBrowser
     
@@ -125,3 +128,4 @@ extension MCServiceManager : MCSessionDelegate {
     }
     
 }
+
