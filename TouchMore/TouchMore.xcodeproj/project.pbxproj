@@ -13,6 +13,8 @@
 		29F8D5451EA443E900C20471 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29F8D5431EA443E900C20471 /* LaunchScreen.storyboard */; };
 		29F8D5511EA45CFF00C20471 /* MCTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F8D5501EA45CFF00C20471 /* MCTableViewController.swift */; };
 		29F8D5531EA45DE800C20471 /* MCServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F8D5521EA45DE800C20471 /* MCServiceManager.swift */; };
+		29F8D5551EA4682900C20471 /* PadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F8D5541EA4682900C20471 /* PadViewController.swift */; };
+		29F8D5571EA46A4600C20471 /* padTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F8D5561EA46A4600C20471 /* padTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		29F8D5461EA443E900C20471 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		29F8D5501EA45CFF00C20471 /* MCTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCTableViewController.swift; sourceTree = "<group>"; };
 		29F8D5521EA45DE800C20471 /* MCServiceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCServiceManager.swift; sourceTree = "<group>"; };
+		29F8D5541EA4682900C20471 /* PadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PadViewController.swift; sourceTree = "<group>"; };
+		29F8D5561EA46A4600C20471 /* padTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = padTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 			children = (
 				29F8D53A1EA443E900C20471 /* AppDelegate.swift */,
 				29F8D53E1EA443E900C20471 /* Main.storyboard */,
+				29F8D5561EA46A4600C20471 /* padTableViewCell.swift */,
+				29F8D5541EA4682900C20471 /* PadViewController.swift */,
 				29F8D5521EA45DE800C20471 /* MCServiceManager.swift */,
 				29F8D5501EA45CFF00C20471 /* MCTableViewController.swift */,
 				29F8D5411EA443E900C20471 /* Assets.xcassets */,
@@ -142,7 +148,9 @@
 			files = (
 				29F8D5511EA45CFF00C20471 /* MCTableViewController.swift in Sources */,
 				29F8D5531EA45DE800C20471 /* MCServiceManager.swift in Sources */,
+				29F8D5551EA4682900C20471 /* PadViewController.swift in Sources */,
 				29F8D53B1EA443E900C20471 /* AppDelegate.swift in Sources */,
+				29F8D5571EA46A4600C20471 /* padTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

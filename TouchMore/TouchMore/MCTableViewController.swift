@@ -9,8 +9,6 @@
 import UIKit
 
 class MCTableViewController: UITableViewController {
-    
-    @IBOutlet weak var MCpeerLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,12 +29,12 @@ class MCTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 4
     }
 
     /*
@@ -84,14 +82,62 @@ class MCTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        super.prepare(for: segue, sender: sender)
+        switch (segue.identifier ?? "") {
+        case "numpadSeg":
+            guard let aPadViewController = segue.destination as? PadViewController else {
+                fatalError("Unexpected destination: \(segue.destination)")
+            }
+            
+            guard let selectedMealCell = sender as? padTableViewCell else {
+                fatalError("Unexpected sender: \(sender ?? "default value")")
+            }
+            
+            guard tableView.indexPath(for: selectedMealCell) != nil else {
+                fatalError("The selected cell is not being displayed by the table")
+            }
+            
+            var numpad = ["1","2","3","4","5","6","7"]
+            
+            aPadViewController.buttons = numpad
+            aPadViewController.navigationItem.title = "Numerical Pad"
+        case "clionSeg":
+            guard let aPadViewController = segue.destination as? PadViewController else {
+                fatalError("Unexpected destination: \(segue.destination)")
+            }
+            
+            guard let selectedMealCell = sender as? padTableViewCell else {
+                fatalError("Unexpected sender: \(sender ?? "default value")")
+            }
+            
+            guard tableView.indexPath(for: selectedMealCell) != nil else {
+                fatalError("The selected cell is not being displayed by the table")
+            }
+            aPadViewController.navigationItem.title = "CLion Shortcuts"
+        case "xcodeSeg":
+            guard let aPadViewController = segue.destination as? PadViewController else {
+                fatalError("Unexpected destination: \(segue.destination)")
+            }
+            
+            guard let selectedMealCell = sender as? padTableViewCell else {
+                fatalError("Unexpected sender: \(sender ?? "default value")")
+            }
+            
+            guard tableView.indexPath(for: selectedMealCell) != nil else {
+                fatalError("The selected cell is not being displayed by the table")
+            }
+            aPadViewController.navigationItem.title = "Xcode Shortcuts"
+        default:
+            fatalError("Unexpected Segue Identifier; \(segue.identifier ?? "default value")")
+        }
     }
-    */
+    
 
 }
