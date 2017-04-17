@@ -32,39 +32,51 @@ class PadViewController: UIViewController {
     }
     
     @IBAction func fourBtn(_ sender: UIButton) {
+        MCService.send(keyName: "kVK_ANSI_Keypad4")
     }
     
     @IBAction func fiveBtn(_ sender: UIButton) {
+        MCService.send(keyName: "kVK_ANSI_Keypad5")
     }
     
     @IBAction func sixBtn(_ sender: UIButton) {
+        MCService.send(keyName: "kVK_ANSI_Keypad6")
     }
     
     @IBAction func dividBtn(_ sender: UIButton) {
+        MCService.send(keyName: "kVK_ANSI_KeypadDivide")
     }
     
     @IBAction func sevenBtn(_ sender: UIButton) {
+        MCService.send(keyName: "kVK_ANSI_Keypad7")
     }
     
     @IBAction func eightBtn(_ sender: UIButton) {
+        MCService.send(keyName: "kVK_ANSI_Keypad8")
     }
     
     @IBAction func nineBtn(_ sender: UIButton) {
+        MCService.send(keyName: "kVK_ANSI_Keypad9")
     }
     
     @IBAction func addBtn(_ sender: UIButton) {
+        MCService.send(keyName: "kVK_ANSI_KeypadPlus")
     }
     
     @IBAction func zeroBtn(_ sender: UIButton) {
+        MCService.send(keyName: "kVK_ANSI_Keypad0")
     }
     
     @IBAction func dotBtn(_ sender: UIButton) {
+        MCService.send(keyName: "kVK_ANSI_KeypadDecimal")
     }
     
     @IBAction func minusBtn(_ sender: UIButton) {
+        MCService.send(keyName: "kVK_ANSI_KeypadMinus")
     }
     
     @IBAction func equalBtn(_ sender: UIButton) {
+        MCService.send(keyName: "kVK_ANSI_KeypadEquals")
     }
     
     override func viewDidLoad() {
@@ -99,7 +111,7 @@ extension PadViewController : MCServiceManagerDelegate {
     
     func connectedDevicesChanged(manager: MCServiceManager, connectedDevices: [String]) {
         OperationQueue.main.addOperation {
-            self.connectionLabel.text = "Connections: \(connectedDevices)"
+            self.connectionLabel.text = "\(connectedDevices)"
         }
     }
     
