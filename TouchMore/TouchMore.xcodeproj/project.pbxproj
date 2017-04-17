@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		29F8D53B1EA443E900C20471 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F8D53A1EA443E900C20471 /* AppDelegate.swift */; };
-		29F8D53D1EA443E900C20471 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F8D53C1EA443E900C20471 /* ViewController.swift */; };
 		29F8D5401EA443E900C20471 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29F8D53E1EA443E900C20471 /* Main.storyboard */; };
 		29F8D5421EA443E900C20471 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29F8D5411EA443E900C20471 /* Assets.xcassets */; };
 		29F8D5451EA443E900C20471 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29F8D5431EA443E900C20471 /* LaunchScreen.storyboard */; };
+		29F8D5511EA45CFF00C20471 /* MCTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F8D5501EA45CFF00C20471 /* MCTableViewController.swift */; };
+		29F8D5531EA45DE800C20471 /* MCServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F8D5521EA45DE800C20471 /* MCServiceManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		29F8D5371EA443E900C20471 /* TouchMore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TouchMore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29F8D53A1EA443E900C20471 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		29F8D53C1EA443E900C20471 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		29F8D53F1EA443E900C20471 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		29F8D5411EA443E900C20471 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		29F8D5441EA443E900C20471 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		29F8D5461EA443E900C20471 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		29F8D5501EA45CFF00C20471 /* MCTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCTableViewController.swift; sourceTree = "<group>"; };
+		29F8D5521EA45DE800C20471 /* MCServiceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCServiceManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +57,9 @@
 			isa = PBXGroup;
 			children = (
 				29F8D53A1EA443E900C20471 /* AppDelegate.swift */,
-				29F8D53C1EA443E900C20471 /* ViewController.swift */,
 				29F8D53E1EA443E900C20471 /* Main.storyboard */,
+				29F8D5521EA45DE800C20471 /* MCServiceManager.swift */,
+				29F8D5501EA45CFF00C20471 /* MCTableViewController.swift */,
 				29F8D5411EA443E900C20471 /* Assets.xcassets */,
 				29F8D5431EA443E900C20471 /* LaunchScreen.storyboard */,
 				29F8D5461EA443E900C20471 /* Info.plist */,
@@ -137,7 +140,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				29F8D53D1EA443E900C20471 /* ViewController.swift in Sources */,
+				29F8D5511EA45CFF00C20471 /* MCTableViewController.swift in Sources */,
+				29F8D5531EA45DE800C20471 /* MCServiceManager.swift in Sources */,
 				29F8D53B1EA443E900C20471 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
