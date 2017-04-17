@@ -13,7 +13,7 @@ import MultipeerConnectivity
 protocol MCServiceManagerDelegate {
     
     func connectedDevicesChanged(manager : MCServiceManager, connectedDevices: [String])
-    func colorChanged(manager : MCServiceManager, colorString: String)
+    func buttonpressed(manager : MCServiceManager, keyStr: String)
     
 }
 
@@ -110,7 +110,7 @@ extension MCServiceManager : MCSessionDelegate {
     func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
         NSLog("%@", "didReceiveData: \(data)")
         let str = String(data: data, encoding: .utf8)!
-        self.delegate?.colorChanged(manager: self, colorString: str)
+        self.delegate?.buttonpressed(manager: self, keyStr: str)
     }
     
     func session(_ session: MCSession, didReceive stream: InputStream, withName streamName: String, fromPeer peerID: MCPeerID) {
