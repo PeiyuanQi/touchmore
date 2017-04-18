@@ -237,7 +237,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QpS-di-b7S">
-                                <rect key="frame" x="118" y="168" width="64" height="64"/>
+                                <rect key="frame" x="118" y="343" width="64" height="64"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="2" backgroundImage="numpadBtnBG"/>
@@ -246,7 +246,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Llb-uE-yAP">
-                                <rect key="frame" x="190" y="168" width="64" height="64"/>
+                                <rect key="frame" x="190" y="343" width="64" height="64"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="3" backgroundImage="numpadBtnBG"/>
@@ -300,7 +300,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mO9-8F-dHE">
-                                <rect key="frame" x="49" y="343" width="64" height="64"/>
+                                <rect key="frame" x="49" y="168" width="64" height="64"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="7" backgroundImage="numpadBtnBG"/>
@@ -308,17 +308,8 @@
                                     <action selector="sevenBtn:" destination="vi7-5k-eBi" eventType="touchUpInside" id="8XB-fT-bDC"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WQ2-6p-NnL">
-                                <rect key="frame" x="118" y="343" width="64" height="64"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="8" backgroundImage="numpadBtnBG"/>
-                                <connections>
-                                    <action selector="eightBtn:" destination="vi7-5k-eBi" eventType="touchUpInside" id="nGC-0V-944"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zKx-Ck-rGA">
-                                <rect key="frame" x="190" y="343" width="64" height="64"/>
+                                <rect key="frame" x="190" y="168" width="64" height="64"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="9" backgroundImage="numpadBtnBG"/>
@@ -372,12 +363,21 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jVu-XT-EeL">
-                                <rect key="frame" x="49" y="168" width="64" height="64"/>
+                                <rect key="frame" x="49" y="343" width="64" height="64"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="1" backgroundImage="numpadBtnBG"/>
                                 <connections>
                                     <action selector="oneBtn:" destination="vi7-5k-eBi" eventType="touchUpInside" id="pw2-GQ-lYG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WQ2-6p-NnL">
+                                <rect key="frame" x="118" y="168" width="64" height="64"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="8" backgroundImage="numpadBtnBG"/>
+                                <connections>
+                                    <action selector="eightBtn:" destination="vi7-5k-eBi" eventType="touchUpInside" id="nGC-0V-944"/>
                                 </connections>
                             </button>
                         </subviews>
