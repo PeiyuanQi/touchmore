@@ -51,6 +51,8 @@ class MCViewController: NSViewController {
                 opt2d?.flags = CGEventFlags.maskShift
             case "kVK_Control":
                 opt2d?.flags = CGEventFlags.maskControl
+            case "kVK_Option":
+                opt2d?.flags = CGEventFlags.maskAlternate
             default:
                 break
             }
@@ -63,25 +65,30 @@ class MCViewController: NSViewController {
             let opt1u = CGEvent(keyboardEventSource: src, virtualKey: CGKeyCode(virtualKey[keys[0]]!), keyDown: false)
             let opt2d = CGEvent(keyboardEventSource: src, virtualKey: CGKeyCode(virtualKey[keys[1]]!), keyDown: true)
             let opt2u = CGEvent(keyboardEventSource: src, virtualKey: CGKeyCode(virtualKey[keys[1]]!), keyDown: false)
-            let opt3d = CGEvent(keyboardEventSource: src, virtualKey: CGKeyCode(virtualKey[keys[1]]!), keyDown: true)
-            let opt3u = CGEvent(keyboardEventSource: src, virtualKey: CGKeyCode(virtualKey[keys[1]]!), keyDown: false)
+            let opt3d = CGEvent(keyboardEventSource: src, virtualKey: CGKeyCode(virtualKey[keys[2]]!), keyDown: true)
+            let opt3u = CGEvent(keyboardEventSource: src, virtualKey: CGKeyCode(virtualKey[keys[2]]!), keyDown: false)
+            var flagRaw : UInt64 = 0
             switch keys[0] {
             case "kVK_Command":
-                opt2d?.flags = CGEventFlags.maskCommand
+                flagRaw = CGEventFlags.maskCommand.rawValue
             case "kVK_Shift":
-                opt2d?.flags = CGEventFlags.maskShift
+                flagRaw = CGEventFlags.maskShift.rawValue
             case "kVK_Control":
-                opt2d?.flags = CGEventFlags.maskControl
+                flagRaw = CGEventFlags.maskControl.rawValue
+            case "kVK_Option":
+                flagRaw = CGEventFlags.maskAlternate.rawValue
             default:
                 break
             }
             switch keys[1] {
             case "kVK_Command":
-                opt3d?.flags = CGEventFlags.maskCommand
+                opt3d?.flags = CGEventFlags(rawValue: CGEventFlags.maskCommand.rawValue | flagRaw)
             case "kVK_Shift":
-                opt3d?.flags = CGEventFlags.maskShift
+                opt3d?.flags = CGEventFlags(rawValue: CGEventFlags.maskShift.rawValue | flagRaw)
             case "kVK_Control":
-                opt3d?.flags = CGEventFlags.maskControl
+                opt3d?.flags = CGEventFlags(rawValue: CGEventFlags.maskControl.rawValue | flagRaw)
+            case "kVK_Option":
+                opt3d?.flags = CGEventFlags(rawValue: CGEventFlags.maskAlternate.rawValue | flagRaw)
             default:
                 break
             }
