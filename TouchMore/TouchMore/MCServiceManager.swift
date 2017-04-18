@@ -23,26 +23,26 @@ class MCServiceManager: NSObject {
     
     private let myPeerId = MCPeerID(displayName: UIDevice.current.name)
     private let serviceAdvertiser : MCNearbyServiceAdvertiser
-    private let serviceBrowser : MCNearbyServiceBrowser
+    //private let serviceBrowser : MCNearbyServiceBrowser
     
     var delegate : MCServiceManagerDelegate?
     
     override init() {
         self.serviceAdvertiser = MCNearbyServiceAdvertiser(peer: myPeerId, discoveryInfo: nil, serviceType: MCServiceType)
-        self.serviceBrowser = MCNearbyServiceBrowser(peer: myPeerId, serviceType: MCServiceType)
+        //self.serviceBrowser = MCNearbyServiceBrowser(peer: myPeerId, serviceType: MCServiceType)
         
         super.init()
         
         self.serviceAdvertiser.delegate = self
         self.serviceAdvertiser.startAdvertisingPeer()
         
-        self.serviceBrowser.delegate = self
-        self.serviceBrowser.startBrowsingForPeers()
+        //self.serviceBrowser.delegate = self
+        //self.serviceBrowser.startBrowsingForPeers()
     }
     
     deinit {
         self.serviceAdvertiser.stopAdvertisingPeer()
-        self.serviceBrowser.stopBrowsingForPeers()
+        //self.serviceBrowser.stopBrowsingForPeers()
     }
     
     lazy var session : MCSession = {
