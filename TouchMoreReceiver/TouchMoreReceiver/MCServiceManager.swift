@@ -25,26 +25,26 @@ class MCServiceManager: NSObject {
     private let MCServiceType = "touchmore-mc"
     
     private let myPeerId = MCPeerID(displayName: SCDynamicStoreKeyCreateComputerName(nil) as String)
-    private let serviceAdvertiser : MCNearbyServiceAdvertiser
+    //private let serviceAdvertiser : MCNearbyServiceAdvertiser
     private let serviceBrowser : MCNearbyServiceBrowser
     
     var delegate : MCServiceManagerDelegate?
     
     override init() {
-        self.serviceAdvertiser = MCNearbyServiceAdvertiser(peer: myPeerId, discoveryInfo: nil, serviceType: MCServiceType)
+        //self.serviceAdvertiser = MCNearbyServiceAdvertiser(peer: myPeerId, discoveryInfo: nil, serviceType: MCServiceType)
         self.serviceBrowser = MCNearbyServiceBrowser(peer: myPeerId, serviceType: MCServiceType)
         
         super.init()
         
-        self.serviceAdvertiser.delegate = self
-        self.serviceAdvertiser.startAdvertisingPeer()
+        //self.serviceAdvertiser.delegate = self
+        //self.serviceAdvertiser.startAdvertisingPeer()
         
         self.serviceBrowser.delegate = self
         self.serviceBrowser.startBrowsingForPeers()
     }
     
     deinit {
-        self.serviceAdvertiser.stopAdvertisingPeer()
+        //self.serviceAdvertiser.stopAdvertisingPeer()
         self.serviceBrowser.stopBrowsingForPeers()
     }
     
