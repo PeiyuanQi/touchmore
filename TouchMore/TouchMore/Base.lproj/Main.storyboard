@@ -226,23 +226,23 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="Bname0" destination="Q75-3T-X1M" id="fc9-Zc-VNP"/>
-                        <outlet property="Bname1" destination="EzG-ob-wnY" id="lDh-TL-CrZ"/>
-                        <outlet property="Bname2" destination="RBH-hq-Diu" id="Okw-FZ-QH1"/>
-                        <outlet property="Bname3" destination="uxk-aj-m1K" id="LQH-vU-dGa"/>
-                        <outlet property="Bname4" destination="4lK-il-lxE" id="Yc5-QJ-ABF"/>
-                        <outlet property="Bname5" destination="5jU-5D-fgg" id="Pqk-F9-HQd"/>
-                        <outlet property="Bname6" destination="ws4-mS-U84" id="6k1-x4-bhk"/>
-                        <outlet property="Bname7" destination="pEt-ye-PgM" id="tyh-rN-kDP"/>
-                        <outlet property="Bname8" destination="4yQ-f8-7Ol" id="Btd-HK-bk7"/>
-                        <outlet property="Bname9" destination="NF7-HK-3ZG" id="OgA-OM-ULJ"/>
                         <outlet property="connectionLabel" destination="otZ-5Y-9T1" id="vie-gp-qCf"/>
                         <outlet property="titleLabel" destination="AW5-3T-4HC" id="UYj-mM-o5w"/>
+                        <outletCollection property="BNames" destination="Q75-3T-X1M" collectionClass="NSMutableArray" id="HsS-Hj-byA"/>
+                        <outletCollection property="BNames" destination="EzG-ob-wnY" collectionClass="NSMutableArray" id="dZT-5e-Hdm"/>
+                        <outletCollection property="BNames" destination="RBH-hq-Diu" collectionClass="NSMutableArray" id="xXY-su-kKJ"/>
+                        <outletCollection property="BNames" destination="uxk-aj-m1K" collectionClass="NSMutableArray" id="n6Y-P6-wwX"/>
+                        <outletCollection property="BNames" destination="4lK-il-lxE" collectionClass="NSMutableArray" id="bOY-KX-RWR"/>
+                        <outletCollection property="BNames" destination="5jU-5D-fgg" collectionClass="NSMutableArray" id="x1U-Gn-JN1"/>
+                        <outletCollection property="BNames" destination="ws4-mS-U84" collectionClass="NSMutableArray" id="n97-g5-cvJ"/>
+                        <outletCollection property="BNames" destination="pEt-ye-PgM" collectionClass="NSMutableArray" id="lrt-MB-Sia"/>
+                        <outletCollection property="BNames" destination="4yQ-f8-7Ol" collectionClass="NSMutableArray" id="QTS-X5-qkh"/>
+                        <outletCollection property="BNames" destination="NF7-HK-3ZG" collectionClass="NSMutableArray" id="rcd-J8-2Dg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="90X-0S-uT1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2116" y="344"/>
+            <point key="canvasLocation" x="2116" y="342"/>
         </scene>
         <!--Setting Shortcuts-->
         <scene sceneID="MH9-kW-oKk">

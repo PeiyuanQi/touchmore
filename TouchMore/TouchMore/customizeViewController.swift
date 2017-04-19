@@ -14,6 +14,7 @@ class customizeViewController: UIViewController {
     
     var opts : [String] = ["kVK_Command","kVK_Command","kVK_Command","kVK_Command","kVK_Command","kVK_Command","kVK_Command","kVK_Command","kVK_Command","kVK_Command"]
     var btnNames : [String] = ["Command","Command","Command","Command","Command","Command","Command","Command","Command","Command"]
+    var parsed_opts : [[String]] = []
     
     @IBAction func screenLockSwitch(_ sender: UISwitch) {
         UIApplication.shared.isIdleTimerDisabled = !UIApplication.shared.isIdleTimerDisabled
@@ -62,16 +63,8 @@ class customizeViewController: UIViewController {
     @IBAction func Btn9(_ sender: UIButton) {
         MCService.send(keyName: opts[9])
     }
-    @IBOutlet weak var Bname0: UIButton!
-    @IBOutlet weak var Bname1: UIButton!
-    @IBOutlet weak var Bname2: UIButton!
-    @IBOutlet weak var Bname3: UIButton!
-    @IBOutlet weak var Bname4: UIButton!
-    @IBOutlet weak var Bname5: UIButton!
-    @IBOutlet weak var Bname6: UIButton!
-    @IBOutlet weak var Bname7: UIButton!
-    @IBOutlet weak var Bname8: UIButton!
-    @IBOutlet weak var Bname9: UIButton!
+    
+    @IBOutlet var BNames: [UIButton]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -92,26 +85,47 @@ class customizeViewController: UIViewController {
     
     @IBAction func settingUnwindAction(_ unwindSegue: UIStoryboardSegue){
         if let vc = unwindSegue.source as? settingViewController{
-            
-            opts = vc.optStrings
             btnNames = vc.names
+            let tmpOpt = vc.optStrings
             if btnNames.count != opts.count {
                 NSLog("%@", "Error: setting error!")
             }
-            while opts.count < 10 {
-                opts.append("kVK_Command")
-                btnNames.append("Command")
+            for i in 0..<10{
+                let tmpStr = tmpOpt[i]
+                if tmpStr != "" {
+                    parsed_opts.append(tmpStr.components(separatedBy: " "))
+                }
+                else {
+                    parsed_opts.append(["Command"])
+                }
+                var tmpShortcut = ""
+                for ele in parsed_opts[i] {
+                    //Fn key
+                    if ele <= "F9" && ele >= "F1"{
+                        tmpShortcut = tmpShortcut + "kVK_" + ele
+                    }
+                    else {
+                        //other key
+                        switch ele {
+                        case "Shift":
+                            tmpShortcut += "kVK_Shift "
+                        case "Command":
+                            tmpShortcut += "kVK_Command "
+                        case "Control":
+                            tmpShortcut += "kVK_Control "
+                        case "Option":
+                            tmpShortcut += "kVK_Option "
+                        default:
+                            tmpShortcut = tmpShortcut + "kVK_ANSI_" + ele
+                        }
+                    }
+                }
+                opts[i] = tmpShortcut
             }
-            Bname0.setTitle(btnNames[0],for: .normal)
-            Bname1.setTitle(btnNames[1],for: .normal)
-            Bname2.setTitle(btnNames[2],for: .normal)
-            Bname3.setTitle(btnNames[3],for: .normal)
-            Bname4.setTitle(btnNames[4],for: .normal)
-            Bname5.setTitle(btnNames[5],for: .normal)
-            Bname6.setTitle(btnNames[6],for: .normal)
-            Bname7.setTitle(btnNames[7],for: .normal)
-            Bname8.setTitle(btnNames[8],for: .normal)
-            Bname9.setTitle(btnNames[9],for: .normal)
+            
+            for i in 0..<10{
+                BNames[i].setTitle(btnNames[i], for: .normal)
+            }
         }
         
     }
