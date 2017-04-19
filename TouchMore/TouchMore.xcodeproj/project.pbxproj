@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		293932921EA63F6600D3AE30 /* CLionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293932911EA63F6600D3AE30 /* CLionViewController.swift */; };
+		2942A57D1EA6AE5E003727E1 /* customizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2942A57C1EA6AE5E003727E1 /* customizeViewController.swift */; };
+		2942A5811EA6E83E003727E1 /* settingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2942A5801EA6E83E003727E1 /* settingViewController.swift */; };
 		29F8D53B1EA443E900C20471 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F8D53A1EA443E900C20471 /* AppDelegate.swift */; };
 		29F8D5401EA443E900C20471 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29F8D53E1EA443E900C20471 /* Main.storyboard */; };
 		29F8D5421EA443E900C20471 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29F8D5411EA443E900C20471 /* Assets.xcassets */; };
@@ -20,6 +22,8 @@
 
 /* Begin PBXFileReference section */
 		293932911EA63F6600D3AE30 /* CLionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLionViewController.swift; sourceTree = "<group>"; };
+		2942A57C1EA6AE5E003727E1 /* customizeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customizeViewController.swift; sourceTree = "<group>"; };
+		2942A5801EA6E83E003727E1 /* settingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = settingViewController.swift; sourceTree = "<group>"; };
 		29F8D5371EA443E900C20471 /* TouchMore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TouchMore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29F8D53A1EA443E900C20471 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		29F8D53F1EA443E900C20471 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -62,8 +66,10 @@
 		29F8D5391EA443E900C20471 /* TouchMore */ = {
 			isa = PBXGroup;
 			children = (
+				2942A5801EA6E83E003727E1 /* settingViewController.swift */,
 				29F8D53A1EA443E900C20471 /* AppDelegate.swift */,
 				29F8D53E1EA443E900C20471 /* Main.storyboard */,
+				2942A57C1EA6AE5E003727E1 /* customizeViewController.swift */,
 				293932911EA63F6600D3AE30 /* CLionViewController.swift */,
 				29F8D5561EA46A4600C20471 /* padTableViewCell.swift */,
 				29F8D5541EA4682900C20471 /* PadViewController.swift */,
@@ -149,8 +155,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2942A57D1EA6AE5E003727E1 /* customizeViewController.swift in Sources */,
 				29F8D5511EA45CFF00C20471 /* MCTableViewController.swift in Sources */,
 				29F8D5531EA45DE800C20471 /* MCServiceManager.swift in Sources */,
+				2942A5811EA6E83E003727E1 /* settingViewController.swift in Sources */,
 				293932921EA63F6600D3AE30 /* CLionViewController.swift in Sources */,
 				29F8D5551EA4682900C20471 /* PadViewController.swift in Sources */,
 				29F8D53B1EA443E900C20471 /* AppDelegate.swift in Sources */,

@@ -10,6 +10,10 @@ import UIKit
 
 class PadViewController: UIViewController {
     let MCService = MCServiceManager()
+    
+    @IBAction func screenLockSwitch(_ sender: UISwitch) {
+        UIApplication.shared.isIdleTimerDisabled = !UIApplication.shared.isIdleTimerDisabled
+    }
 
     @IBOutlet weak var titleLabel: UINavigationItem!
     
