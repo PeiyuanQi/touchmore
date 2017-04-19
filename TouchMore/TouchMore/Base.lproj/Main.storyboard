@@ -47,7 +47,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CLion Shortcuts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RiF-vr-LcX">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="JetBrain Shortcuts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RiF-vr-LcX">
                                                     <rect key="frame" x="23" y="11" width="328" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -804,7 +804,7 @@
             </objects>
             <point key="canvasLocation" x="3685.5999999999999" y="341.37931034482762"/>
         </scene>
-        <!--CLion Shortcuts-->
+        <!--JetBrain Shortcuts-->
         <scene sceneID="7Sy-wU-SER">
             <objects>
                 <viewController id="WjH-8F-NK4" customClass="CLionViewController" customModule="TouchMore" customModuleProvider="target" sceneMemberID="viewController">
@@ -927,7 +927,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="CLion Shortcuts" id="T1S-C3-E7h"/>
+                    <navigationItem key="navigationItem" title="JetBrain Shortcuts" id="T1S-C3-E7h"/>
                     <connections>
                         <outlet property="connectionLabel" destination="9vX-jt-oPm" id="nE3-pk-Rz6"/>
                         <outlet property="titleLabel" destination="T1S-C3-E7h" id="rOh-Bl-wtY"/>
