@@ -86,7 +86,11 @@ extension MCTableViewController : MCServiceManagerDelegate {
     
     func connectedDevicesChanged(manager: MCServiceManager, connectedDevices: [String]) {
         OperationQueue.main.addOperation {
-            self.connectionLabel.text = "\(connectedDevices)"
+            var tmpStr = ""
+            for each in connectedDevices{
+                tmpStr = tmpStr + each + " "
+            }
+            self.connectionLabel.text = "\(tmpStr)"
         }
     }
     
