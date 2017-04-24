@@ -9,7 +9,7 @@
 import UIKit
 
 class PadViewController: UIViewController {
-    let MCService = MCServiceManager()
+    var MCService : MCServiceManager? = nil
     
     @IBAction func screenLockSwitch(_ sender: UISwitch) {
         UIApplication.shared.isIdleTimerDisabled = !UIApplication.shared.isIdleTimerDisabled
@@ -17,70 +17,132 @@ class PadViewController: UIViewController {
 
     @IBOutlet weak var titleLabel: UINavigationItem!
     
-    @IBOutlet weak var connectionLabel: UILabel!
-    
     @IBAction func oneBtn(_ sender: UIButton) {
-        MCService.send(keyName: "kVK_ANSI_Keypad1")
+        if let tmp = MCService {
+            tmp.send(keyName: "kVK_ANSI_Keypad1")
+        } else {
+            fatalError("nil MCService")
+        }
     }
     
     @IBAction func twoBtn(_ sender: UIButton) {
-        MCService.send(keyName: "kVK_ANSI_Keypad2")
+        if let tmp = MCService {
+            tmp.send(keyName: "kVK_ANSI_Keypad2")
+        } else {
+            fatalError("nil MCService")
+        }
     }
     
     @IBAction func threeBtn(_ sender: UIButton) {
-        MCService.send(keyName: "kVK_ANSI_Keypad3")
+        if let tmp = MCService {
+            tmp.send(keyName: "kVK_ANSI_Keypad3")
+        } else {
+            fatalError("nil MCService")
+        }
     }
     
     @IBAction func multiplyBtn(_ sender: UIButton) {
-        MCService.send(keyName: "kVK_ANSI_KeypadMultiply")
+        if let tmp = MCService {
+            tmp.send(keyName: "kVK_ANSI_KeypadMultiply")
+        } else {
+            fatalError("nil MCService")
+        }
     }
     
     @IBAction func fourBtn(_ sender: UIButton) {
-        MCService.send(keyName: "kVK_ANSI_Keypad4")
+        if let tmp = MCService {
+            tmp.send(keyName: "kVK_ANSI_Keypad4")
+        } else {
+            fatalError("nil MCService")
+        }
     }
     
     @IBAction func fiveBtn(_ sender: UIButton) {
-        MCService.send(keyName: "kVK_ANSI_Keypad5")
+        if let tmp = MCService {
+            tmp.send(keyName: "kVK_ANSI_Keypad5")
+        } else {
+            fatalError("nil MCService")
+        }
     }
     
     @IBAction func sixBtn(_ sender: UIButton) {
-        MCService.send(keyName: "kVK_ANSI_Keypad6")
+        if let tmp = MCService {
+            tmp.send(keyName: "kVK_ANSI_Keypad6")
+        } else {
+            fatalError("nil MCService")
+        }
     }
     
     @IBAction func dividBtn(_ sender: UIButton) {
-        MCService.send(keyName: "kVK_ANSI_KeypadDivide")
+        if let tmp = MCService {
+            tmp.send(keyName: "kVK_ANSI_KeypadDivide")
+        } else {
+            fatalError("nil MCService")
+        }
     }
     
     @IBAction func sevenBtn(_ sender: UIButton) {
-        MCService.send(keyName: "kVK_ANSI_Keypad7")
+        if let tmp = MCService {
+            tmp.send(keyName: "kVK_ANSI_Keypad7")
+        } else {
+            fatalError("nil MCService")
+        }
     }
     
     @IBAction func eightBtn(_ sender: UIButton) {
-        MCService.send(keyName: "kVK_ANSI_Keypad8")
+        if let tmp = MCService {
+            tmp.send(keyName: "kVK_ANSI_Keypad8")
+        } else {
+            fatalError("nil MCService")
+        }
     }
     
     @IBAction func nineBtn(_ sender: UIButton) {
-        MCService.send(keyName: "kVK_ANSI_Keypad9")
+        if let tmp = MCService {
+            tmp.send(keyName: "kVK_ANSI_Keypad9")
+        } else {
+            fatalError("nil MCService")
+        }
     }
     
     @IBAction func addBtn(_ sender: UIButton) {
-        MCService.send(keyName: "kVK_ANSI_KeypadPlus")
+        if let tmp = MCService {
+            tmp.send(keyName: "kVK_ANSI_KeypadPlus")
+        } else {
+            fatalError("nil MCService")
+        }
     }
     
     @IBAction func zeroBtn(_ sender: UIButton) {
-        MCService.send(keyName: "kVK_ANSI_Keypad0")
+        if let tmp = MCService {
+            tmp.send(keyName: "kVK_ANSI_Keypad0")
+        } else {
+            fatalError("nil MCService")
+        }
     }
     
     @IBAction func dotBtn(_ sender: UIButton) {
-        MCService.send(keyName: "kVK_ANSI_KeypadDecimal")
+        if let tmp = MCService {
+            tmp.send(keyName: "kVK_ANSI_KeypadDecimal")
+        } else {
+            fatalError("nil MCService")
+        }
     }
     
     @IBAction func minusBtn(_ sender: UIButton) {
-        MCService.send(keyName: "kVK_ANSI_KeypadMinus")
+        if let tmp = MCService {
+            tmp.send(keyName: "kVK_ANSI_KeypadMinus")
+        } else {
+            fatalError("nil MCService")
+        }
     }
     
     @IBAction func equalBtn(_ sender: UIButton) {
-        MCService.send(keyName: "kVK_ANSI_KeypadEquals")
+        if let tmp = MCService {
+            tmp.send(keyName: "kVK_ANSI_KeypadEquals")
+        } else {
+            fatalError("nil MCService")
+        }
     }
     
     override func viewDidLoad() {
@@ -88,44 +150,12 @@ class PadViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        MCService.delegate = self
+        //MCService!.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    /*
-    func keyEvent(<#parameters#>) -> <#return type#> {
-        <#function body#>
-    }
-    */
-}
-
-extension PadViewController : MCServiceManagerDelegate {
-    
-    func connectedDevicesChanged(manager: MCServiceManager, connectedDevices: [String]) {
-        OperationQueue.main.addOperation {
-            self.connectionLabel.text = "\(connectedDevices)"
-        }
-    }
-    
-    func buttonpressed(manager: MCServiceManager, keyStr: String) {
-        OperationQueue.main.addOperation {
-            //keyEvent()
-            NSLog("%@", "Key Pressed: \(keyStr)")
-        }
     }
     
 }

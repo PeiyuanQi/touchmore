@@ -10,7 +10,7 @@ import UIKit
 
 class CLionViewController: UIViewController {
     
-    let MCService = MCServiceManager()
+    var MCService : MCServiceManager? = nil
     
     @IBAction func screenLockSwitch(_ sender: UISwitch) {
         UIApplication.shared.isIdleTimerDisabled = !UIApplication.shared.isIdleTimerDisabled
@@ -18,46 +18,94 @@ class CLionViewController: UIViewController {
     
     @IBOutlet weak var titleLabel: UINavigationItem!
     
-    @IBOutlet weak var connectionLabel: UILabel!
-    
     @IBAction func reformatBtn(_ sender: UIButton) {
-        MCService.send(keyName: "kVK_Option kVK_Command kVK_ANSI_L")
+        if let tmp = MCService {
+            tmp.send(keyName: "kVK_Option kVK_Command kVK_ANSI_L")
+        } else {
+            fatalError("nil MCService")
+        }
+
     }
     
     @IBAction func extraMethodBtn(_ sender: UIButton) {
-        MCService.send(keyName: "kVK_Option kVK_Command kVK_ANSI_M")
+        if let tmp = MCService {
+            tmp.send(keyName: "kVK_Option kVK_Command kVK_ANSI_M")
+        } else {
+            fatalError("nil MCService")
+        }
+
     }
     
     @IBAction func surroundBtn(_ sender: UIButton) {
-        MCService.send(keyName: "kVK_Option kVK_Command kVK_ANSI_T")
+        if let tmp = MCService {
+            tmp.send(keyName: "kVK_Option kVK_Command kVK_ANSI_T")
+        } else {
+            fatalError("nil MCService")
+        }
+
     }
     
     @IBAction func renameBtn(_ sender: UIButton) {
-        MCService.send(keyName: "kVK_Shift kVK_F6")
+        if let tmp = MCService {
+            tmp.send(keyName: "kVK_Shift kVK_F6")
+        } else {
+            fatalError("nil MCService")
+        }
+
     }
     
     @IBAction func commentLineBtn(_ sender: UIButton) {
-        MCService.send(keyName: "kVK_Command kVK_ANSI_Slash")
+        if let tmp = MCService {
+            tmp.send(keyName: "kVK_Command kVK_ANSI_Slash")
+        } else {
+            fatalError("nil MCService")
+        }
+
     }
     
     @IBAction func extractDefineBtn(_ sender: UIButton) {
-        MCService.send(keyName: "kVK_Option kVK_Command kVK_ANSI_D")
+        if let tmp = MCService {
+            tmp.send(keyName: "kVK_Option kVK_Command kVK_ANSI_D")
+        } else {
+            fatalError("nil MCService")
+        }
+
     }
     
     @IBAction func commentBlockBtn(_ sender: UIButton) {
-        MCService.send(keyName: "kVK_Option kVK_Command kVK_ANSI_Slash")
+        if let tmp = MCService {
+            tmp.send(keyName: "kVK_Option kVK_Command kVK_ANSI_Slash")
+        } else {
+            fatalError("nil MCService")
+        }
+
     }
     
     @IBAction func extractConstantBtn(_ sender: UIButton) {
-        MCService.send(keyName: "kVK_Option kVK_Command kVK_ANSI_C")
+        if let tmp = MCService {
+            tmp.send(keyName: "kVK_Option kVK_Command kVK_ANSI_C")
+        } else {
+            fatalError("nil MCService")
+        }
+
     }
     
     @IBAction func buildBtn(_ sender: UIButton) {
-        MCService.send(keyName: "kVK_Command kVK_F9")
+        if let tmp = MCService {
+            tmp.send(keyName: "kVK_Command kVK_F9")
+        } else {
+            fatalError("nil MCService")
+        }
+
     }
     
     @IBAction func extractVarBtn(_ sender: UIButton) {
-        MCService.send(keyName: "kVK_Option kVK_Command kVK_ANSI_V")
+        if let tmp = MCService {
+            tmp.send(keyName: "kVK_Option kVK_Command kVK_ANSI_V")
+        } else {
+            fatalError("nil MCService")
+        }
+
     }
     
     override func viewDidLoad() {
@@ -65,7 +113,7 @@ class CLionViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        MCService.delegate = self
+        //MCService.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -85,21 +133,3 @@ class CLionViewController: UIViewController {
     */
 
 }
-
-extension CLionViewController : MCServiceManagerDelegate {
-    
-    func connectedDevicesChanged(manager: MCServiceManager, connectedDevices: [String]) {
-        OperationQueue.main.addOperation {
-            self.connectionLabel.text = "\(connectedDevices)"
-        }
-    }
-    
-    func buttonpressed(manager: MCServiceManager, keyStr: String) {
-        OperationQueue.main.addOperation {
-            //keyEvent()
-            NSLog("%@", "Key Pressed: \(keyStr)")
-        }
-    }
-    
-}
-

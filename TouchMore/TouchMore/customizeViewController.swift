@@ -10,7 +10,7 @@ import UIKit
 
 class customizeViewController: UIViewController {
     
-    let MCService = MCServiceManager()
+    var MCService : MCServiceManager? = nil
     
     var opts : [String] = ["kVK_Command","kVK_Command","kVK_Command","kVK_Command","kVK_Command","kVK_Command","kVK_Command","kVK_Command","kVK_Command","kVK_Command"]
     var btnNames : [String] = ["Command","Command","Command","Command","Command","Command","Command","Command","Command","Command"]
@@ -22,46 +22,94 @@ class customizeViewController: UIViewController {
     
     @IBOutlet weak var titleLabel: UINavigationItem!
     
-    @IBOutlet weak var connectionLabel: UILabel!
-    
     @IBAction func Btn0(_ sender: UIButton) {
-        MCService.send(keyName: opts[0])
+        if let tmp = MCService {
+            tmp.send(keyName: opts[0])
+        } else {
+            fatalError("nil MCService")
+        }
+
     }
     
     @IBAction func Btn1(_ sender: UIButton) {
-        MCService.send(keyName: opts[1])
+        if let tmp = MCService {
+            tmp.send(keyName: opts[1])
+        } else {
+            fatalError("nil MCService")
+        }
+
     }
     
     @IBAction func Btn2(_ sender: UIButton) {
-        MCService.send(keyName: opts[2])
+        if let tmp = MCService {
+            tmp.send(keyName: opts[2])
+        } else {
+            fatalError("nil MCService")
+        }
+
     }
     
     @IBAction func Btn3(_ sender: UIButton) {
-        MCService.send(keyName: opts[3])
+        if let tmp = MCService {
+            tmp.send(keyName: opts[3])
+        } else {
+            fatalError("nil MCService")
+        }
+
     }
     
     @IBAction func Btn4(_ sender: UIButton) {
-        MCService.send(keyName: opts[4])
+        if let tmp = MCService {
+            tmp.send(keyName: opts[4])
+        } else {
+            fatalError("nil MCService")
+        }
+
     }
     
     @IBAction func Btn5(_ sender: UIButton) {
-        MCService.send(keyName: opts[5])
+        if let tmp = MCService {
+            tmp.send(keyName: opts[5])
+        } else {
+            fatalError("nil MCService")
+        }
+
     }
     
     @IBAction func Btn6(_ sender: UIButton) {
-        MCService.send(keyName: opts[6])
+        if let tmp = MCService {
+            tmp.send(keyName: opts[6])
+        } else {
+            fatalError("nil MCService")
+        }
+
     }
     
     @IBAction func Btn7(_ sender: UIButton) {
-        MCService.send(keyName: opts[7])
+        if let tmp = MCService {
+            tmp.send(keyName: opts[7])
+        } else {
+            fatalError("nil MCService")
+        }
+
     }
     
     @IBAction func Btn8(_ sender: UIButton) {
-        MCService.send(keyName: opts[8])
+        if let tmp = MCService {
+            tmp.send(keyName: opts[8])
+        } else {
+            fatalError("nil MCService")
+        }
+
     }
     
     @IBAction func Btn9(_ sender: UIButton) {
-        MCService.send(keyName: opts[9])
+        if let tmp = MCService {
+            tmp.send(keyName: opts[9])
+        } else {
+            fatalError("nil MCService")
+        }
+
     }
     
     @IBOutlet var BNames: [UIButton]!
@@ -71,7 +119,7 @@ class customizeViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        MCService.delegate = self
+        //MCService.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -140,20 +188,3 @@ class customizeViewController: UIViewController {
     */
 
 }
-
-extension customizeViewController : MCServiceManagerDelegate {
-    
-    func connectedDevicesChanged(manager: MCServiceManager, connectedDevices: [String]) {
-        OperationQueue.main.addOperation {
-            self.connectionLabel.text = "\(connectedDevices)"
-        }
-    }
-    
-    func buttonpressed(manager: MCServiceManager, keyStr: String) {
-        OperationQueue.main.addOperation {
-            NSLog("%@", "Key Pressed: \(keyStr)")
-        }
-    }
-    
-}
-
