@@ -24,7 +24,8 @@ class MCServiceManager: NSObject {
     // and can contain only ASCII lowercase letters, numbers and hyphens.
     private let MCServiceType = "touchmore-mc"
     
-    private let myPeerId = MCPeerID(displayName: SCDynamicStoreKeyCreateComputerName(nil) as String)
+    private let myPeerId = MCPeerID(displayName: Host.current().localizedName ?? "")
+    //private let myPeerId = MCPeerID(displayName: SCDynamicStoreKeyCreateComputerName(nil) as String)
     //private let serviceAdvertiser : MCNearbyServiceAdvertiser
     private let serviceBrowser : MCNearbyServiceBrowser
     
