@@ -142,6 +142,9 @@ class settingViewController: UITableViewController, UIPickerViewDelegate,UIPicke
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if (indexPath.row % 2 != 0) && PickerHidden[indexPath.row/2] && indexPath.section == 0{
+            for textField in btnNames{
+                textField.resignFirstResponder()
+            }
             return 0
         }
         else {
