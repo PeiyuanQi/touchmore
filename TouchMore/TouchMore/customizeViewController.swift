@@ -144,7 +144,7 @@ class customizeViewController: UIViewController {
                     parsed_opts.append(tmpStr.components(separatedBy: " "))
                 }
                 else {
-                    parsed_opts.append(["Command"])
+                    parsed_opts.append(["Control","1"])
                 }
                 var tmpShortcut = ""
                 for ele in parsed_opts[i] {
